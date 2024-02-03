@@ -1,0 +1,47 @@
+//Faça um programa que leia uma quantidade indeterminada de números positivos e
+//conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100].
+//A entrada de dados deverá terminar quando for lido um número negativo.
+
+namespace resolucaoExercicios
+{
+    public class Resolucao
+    {
+        static void Main()
+        {
+            int numeroEntrada = 0;
+
+            int numeroVinteCinco = 0;
+            int numeroCinquenta = 0;
+            int numeroSetentaCinco = 0;
+            int numeroCem = 0;
+
+            while (numeroEntrada >= 0 )
+            {
+                Console.Write("Numero: ");
+                numeroEntrada = int.Parse(Console.ReadLine());
+
+                if ( numeroEntrada >= 0 && numeroEntrada <= 25)
+                {
+                    numeroVinteCinco++;
+                }
+                if ( numeroEntrada > 25 && numeroEntrada <= 50 )
+                {
+                    numeroCinquenta++;
+                }
+                if (numeroEntrada > 50 && numeroEntrada <= 75 )
+                {
+                    numeroSetentaCinco++;
+                }
+                if (numeroEntrada > 75 && numeroEntrada <=100)
+                {
+                    numeroCem++;
+                }
+            }
+            Console.WriteLine($"[0 - 25] : {numeroVinteCinco}");
+            Console.WriteLine($"[26 - 50] : {numeroCinquenta}");
+            Console.WriteLine($"[51 - 75] : {numeroSetentaCinco}");
+            Console.WriteLine($"[76 - 100] : {numeroCem}");
+            Console.ReadLine();
+        }
+    }
+}
