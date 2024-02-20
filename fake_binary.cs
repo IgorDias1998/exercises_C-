@@ -1,3 +1,5 @@
+//Receber uma string de números, onde os números forem menores que 5 adicionar "0" e os maiores ou iguais adicionar "1"
+
 using System.Linq;
 namespace Variaveis
 {
